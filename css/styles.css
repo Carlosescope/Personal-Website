@@ -1,0 +1,98 @@
+html, body {
+  background-image: url('../images/fondo.jpg');
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px auto 100px;
+  grid-gap: 5px;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "f f f f f f f f f f f f"
+}
+
+.header {
+  grid-area: h;
+}
+
+.logo-ca_container {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 91px;
+  height: 45px;
+}
+
+.ca-logo {
+  width: 100%;
+  /* width: 91px;
+  height: 45px; */
+}
+
+.menu {
+  grid-area: m;
+}
+
+li img {
+  height: 35px;
+}
+
+.buttons-vertical {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  margin-top: -150px;
+}
+
+.button {
+  height: 75px;
+}
+
+.main {
+  grid-area: c;
+}
+
+.description {
+  display: grid;
+  color: white;
+  width: 600px;
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer {
+  grid-area: f;
+}
+
+.logo-depcom_container {
+  display: inline;
+  position: absolute;
+  right: 0;
+  top: 905px;
+  margin-right: 10px;
+}
+
+.logo-depcom {
+  width: 347px;
+  height: 60px;
+}
+
+/* @media screen and (max-width: 1070px){
+  .container {
+    grid-template-rows: 100px 745px 745px 100px;
+    grid-template-areas:
+    "h h h h h h h h h h h h"
+    "m m m m m m m m m m m m"
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f"
+  }
+} */
