@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("/css/fonts/effort/effort-webfont.woff") format("woff");
+  src: url("/css/fonts/effort/effort-webfont.woff2") format("woff2");
+  }
+ 
+ 
  body {
   margin: 0;
   width: 100%;
@@ -13,41 +20,113 @@
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows:  1fr 100px;
   height: 100vh;
   grid-gap: 0px;
   grid-template-areas:
-    "h h h h h h h h h h h h"
-    "m c c c c c c c c c c c"
+    "l l l l l l r r r r r r"
     "f f f f f f f f f f f f"
 }
 
-.header {
-  grid-area: h;
+.left {
+  grid-area: l;
+  position: relative;
 }
 
-.logo-ca_container {
-  display: inline-block;
-  margin-top: 30px;
-  margin-left: 30px;
-  width: 91px;
-  height: 45px;
+.description {
+  color: white;
+  position: absolute;
+  right: 30%;
+  top: 50%;
+}
+h1 {
+  font-family: 'effort';
+  font-size: 3em;
+  letter-spacing: 2px;
+  margin: 5px;
 }
 
-.ca-logo {
-  width: 100%;
-  /* width: 91px;
-  height: 45px; */
+p {
+  margin: 5px;
+  font-family: 'Exo 2', sans-serif;
+  margin-left: 10px;
+  font-size: 1rem;
 }
 
-.menu {
-  grid-area: m;
-  align-items: center;
+.right {
+  grid-area: r;
+  position: relative;
+}
+
+.logo-cl {
+  position: absolute;
+  left: 35%;
+  top: 45%;
+}
+.logo-cl img {
+  height: 160px;
+}
+
+.footer {
+  grid-area: f;
+  margin: auto;
+  margin-top: 0;
+}
+
+.social-menu {
+ display: inline-flex;
+ list-style-type: none;
+ padding-left: 0;
+}
+
+li {
+  margin-left: 65px;
 }
 
 li img {
-  height: 35px;
+  height: 40px;
 }
+
+.facebook_button {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 1250px){
+  .container {
+    grid-template-rows:  855px;
+    grid-template-areas:
+    "l l l l l l r r r r r r"
+    "f f f f f f f f f f f f"
+  }
+
+  .description {
+    right: 0;
+  }
+
+  .logo-cl {
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 820px){
+  .container {
+    grid-template-rows:  1fr 1fr 100px;
+    grid-template-areas: 
+    "r r r r r r r r r r r r" 
+    "l l l l l l l l l l l l"
+    "f f f f f f f f f f f f"
+  }
+
+  .description {
+    right: 0;
+  }
+
+  .logo-cl {
+    left: 15%;
+  }
+}
+
+/* 
 
 .buttons-vertical {
   padding-left: 0px;
@@ -68,28 +147,10 @@ li img {
   grid-area: c;
 }
 
-.description {
-  display: grid;
-  color: white;
-  width: 600px;
-  text-align: center;
-  font-family: 'Exo 2', sans-serif;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 .footer {
   grid-area: f;
-}
-
-.logo-depcom_container {
-  display: inline;
-  position: absolute;
-  right: 0;
-  /* top: 905px; */
-  margin-right: 40px;
 }
 
 .logo-depcom {
@@ -97,7 +158,17 @@ li img {
   height: 60px;
 }
 
-/* @media screen and (max-width: 1070px){
+.logo-depcom_container {
+  display: inline;
+  position: absolute;
+  right: 0;
+  top: 905px; 
+  margin-right: 40px;
+}
+
+
+
+ @media screen and (max-width: 1250px){
   .container {
     grid-template-rows: 100px 745px 745px 100px;
     grid-template-areas:
@@ -106,12 +177,12 @@ li img {
     "c c c c c c c c c c c c"
     "f f f f f f f f f f f f"
   }
-} */
+}
 
 @media screen and (max-width: 750px) {
-  /* body {
+   body {
     border: 1px solid red;
-  } */
+  } 
 
   .container {
     grid-template-areas: 
@@ -155,4 +226,4 @@ li img {
 
 
   
-}
+} */
