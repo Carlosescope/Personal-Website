@@ -3,47 +3,42 @@
   src: url("/css/fonts/effort/effort-webfont.woff") format("woff");
   src: url("/css/fonts/effort/effort-webfont.woff2") format("woff2");
   }
+
+  /* -----Default propiertes------*/
+  body, html {
+    height: 100vh;
+  }
  
  
  body {
   margin: 0;
   width: 100%;
   min-height: 640px;
-  background-image: url('../images/fondo.jpg');
+  background-image: url('../images/fondo.png');
   background-position: center center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;
   background-color: black;
-}
-
-.container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows:  1fr 100px;
-  height: 100vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:  auto 100px;
   grid-gap: 0px;
   grid-template-areas:
-    "l l l l l l r r r r r r"
-    "f f f f f f f f f f f f"
+    "l r"
+    "f f"
 }
 
 .left {
   grid-area: l;
-  position: relative;
 }
 
-.description {
-  color: white;
-  position: absolute;
-  right: 30%;
-  top: 50%;
-}
 h1 {
   font-family: 'effort';
   font-size: 3em;
   letter-spacing: 2px;
   margin: 5px;
+  color: white;
 }
 
 p {
@@ -51,20 +46,11 @@ p {
   font-family: 'Exo 2', sans-serif;
   margin-left: 10px;
   font-size: 1rem;
+  color: white;
 }
 
 .right {
   grid-area: r;
-  position: relative;
-}
-
-.logo-cl {
-  position: absolute;
-  left: 35%;
-  top: 45%;
-}
-.logo-cl img {
-  height: 160px;
 }
 
 .footer {
@@ -93,14 +79,13 @@ li img {
 
 @media screen and (max-width: 1250px){
   .container {
-    grid-template-rows:  855px;
+    grid-template-rows:  1fr 1fr;
     grid-template-areas:
     "l l l l l l r r r r r r"
     "f f f f f f f f f f f f"
   }
-
-  .description {
-    right: 0;
+  .description{
+    right: 0%;
   }
 
   .logo-cl {
@@ -115,10 +100,6 @@ li img {
     "r r r r r r r r r r r r" 
     "l l l l l l l l l l l l"
     "f f f f f f f f f f f f"
-  }
-
-  .description {
-    right: 0;
   }
 
   .logo-cl {
