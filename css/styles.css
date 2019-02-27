@@ -118,6 +118,49 @@ li img {
  *------------ MOTION ---------------------------------
  */
 
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 850px){
+  body {
+    grid-template-columns: 100%;
+    grid-template-rows:  200px auto 100px;
+    grid-template-areas:
+      "l"
+      "r"
+      "f"
+  }
+
+  .left {
+    width: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 3vw;
+  }
+
+  p {
+    text-align: center;
+    font-size: 2vw;
+  }
+
+  .social-menu {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+}
+
+@media screen and (max-width: 610px){
+
+  .right {
+    width: auto;
+  }
+
+  li {
+    margin-left: 30px;
+  }
+  
+  li img {
+    height: 7vw;
+  }
 
 }
