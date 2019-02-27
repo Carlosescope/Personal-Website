@@ -14,14 +14,14 @@
   --main-black: #;
   --main-white: #;
 }
-
+/* 
 @font-face {
   font-family: "CustomFont";
   src: url("/css/fonts/centauri-webfont.woof") format("woff");
   src: url("/css/fonts/centauri-webfont.woff2") format("woff2");
   src: url("/css/fonts/exo2-thin-webfont.woof") format("woff");
   src: url("/css/fonts/exo2-thin-webfont.woff2") format("woff2");
-  }
+  } */
 
 html {
   font-family: Avenir, sans-serif;
@@ -34,7 +34,7 @@ body, html {
 
 body {
   min-height: 640px;
-  background-image: url('../images/fondo.png');
+  background-image: url('../images/fondo.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
@@ -63,7 +63,7 @@ body {
 }
 
 h1 {
-  font-family: 'centauri';
+  font-family: centauriregular;
   font-size: 30px;
   letter-spacing: 15px;
   margin: auto;
@@ -72,7 +72,7 @@ h1 {
 
 p {
   margin: auto;
-  font-family: 'Exo 2', sans-serif;
+  font-family: exo_2thin, sans-serif;
   margin-left: 15px;
   font-size: 16px;
   color: white;
@@ -154,6 +154,11 @@ li img {
   .right {
     width: auto;
   }
+
+  h1 {
+    letter-spacing: unset;
+  }
+
 
   li {
     margin-left: 30px;
