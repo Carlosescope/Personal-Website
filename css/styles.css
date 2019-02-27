@@ -1,18 +1,38 @@
+/*
+ *------------ GLOBAL ------------------------------
+ */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+:root {
+  --main-black: #;
+  --main-white: #;
+}
+
 @font-face {
   font-family: "CustomFont";
-  src: url("/css/fonts/effort/effort-webfont.woff") format("woff");
-  src: url("/css/fonts/effort/effort-webfont.woff2") format("woff2");
+  src: url("/css/fonts/centauri-webfont.woof") format("woff");
+  src: url("/css/fonts/centauri-webfont.woff2") format("woff2");
+  src: url("/css/fonts/exo2-thin-webfont.woof") format("woff");
+  src: url("/css/fonts/exo2-thin-webfont.woff2") format("woff2");
   }
 
-  /* -----Default propiertes------*/
-  body, html {
-    height: 100vh;
-  }
- 
- 
- body {
-  margin: 0;
+html {
+  font-family: Avenir, sans-serif;
+}
+
+body, html {
+  height: 100vh;
   width: 100%;
+}
+
+body {
   min-height: 640px;
   background-image: url('../images/fondo.png');
   background-position: center center;
@@ -28,32 +48,50 @@
     "l r"
     "f f"
 }
+/*
+ *------------ NAV ---------------------------------
+ */
 
-.left {
+/*
+ *------------ CONTENT ---------------------------------
+ */
+ .left {
   grid-area: l;
+  width: 80%;
+  margin: auto;
+  margin-right: 0;
 }
 
 h1 {
-  font-family: 'effort';
-  font-size: 3em;
-  letter-spacing: 2px;
-  margin: 5px;
+  font-family: 'centauri';
+  font-size: 30px;
+  letter-spacing: 15px;
+  margin: auto;
   color: white;
 }
 
 p {
-  margin: 5px;
+  margin: auto;
   font-family: 'Exo 2', sans-serif;
-  margin-left: 10px;
-  font-size: 1rem;
+  margin-left: 15px;
+  font-size: 16px;
   color: white;
 }
 
 .right {
   grid-area: r;
+  width: 40%;
+  max-width: 280px;
+  margin: auto;
 }
+/*
+ *------------ BACKGROUND LINES ---------------------------------
+ */
 
-.footer {
+/*
+ *------------ FOOTER ---------------------------------
+ */
+ .footer {
   grid-area: f;
   margin: auto;
   margin-top: 0;
@@ -76,135 +114,10 @@ li img {
 .facebook_button {
   margin-left: 0px;
 }
+/*
+ *------------ MOTION ---------------------------------
+ */
 
 @media screen and (max-width: 1250px){
-  .container {
-    grid-template-rows:  1fr 1fr;
-    grid-template-areas:
-    "l l l l l l r r r r r r"
-    "f f f f f f f f f f f f"
-  }
-  .description{
-    right: 0%;
-  }
 
-  .logo-cl {
-    left: 15%;
-  }
 }
-
-@media screen and (max-width: 820px){
-  .container {
-    grid-template-rows:  1fr 1fr 100px;
-    grid-template-areas: 
-    "r r r r r r r r r r r r" 
-    "l l l l l l l l l l l l"
-    "f f f f f f f f f f f f"
-  }
-
-  .logo-cl {
-    left: 15%;
-  }
-}
-
-/* 
-
-.buttons-vertical {
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.button {
-  height: 75px;
-}
-
-.main {
-  grid-area: c;
-}
-
-
-
-.footer {
-  grid-area: f;
-}
-
-.logo-depcom {
-  width: 130px;
-  height: 60px;
-}
-
-.logo-depcom_container {
-  display: inline;
-  position: absolute;
-  right: 0;
-  top: 905px; 
-  margin-right: 40px;
-}
-
-
-
- @media screen and (max-width: 1250px){
-  .container {
-    grid-template-rows: 100px 745px 745px 100px;
-    grid-template-areas:
-    "h h h h h h h h h h h h"
-    "m m m m m m m m m m m m"
-    "c c c c c c c c c c c c"
-    "f f f f f f f f f f f f"
-  }
-}
-
-@media screen and (max-width: 750px) {
-   body {
-    border: 1px solid red;
-  } 
-
-  .container {
-    grid-template-areas: 
-    "m m m m m m m m m m m m"
-    "c c c c c c c c c c c c"
-    "f f f f f f f f f f f f"
-  }
-
-  .buttons-vertical {
-    margin-top: 44px;
-    text-align: center;
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .logo-depcom_container {
-    display: block;
-    position: relative;
-    top: 0;
-    width: 347px;
-    height: 60px;
-    margin: auto;
-  }
-
-  .description {
-    font-size: 3vw;
-    width: 400px;
-  }
-
-  p {
-    font-size: 3vw;
-  }
-
-
-
-
-
-
-  
-} */
